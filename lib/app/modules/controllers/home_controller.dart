@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:new_login/app/modules/views/welcome_view.dart';
 
 class HomeController extends GetxController {
-  final GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
+  GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
   late TextEditingController emailController, passwordController;
-  late Box box1;
+  Box? box1;
   var userEmail = '';
   var passWord = ''.obs;
   bool isChecked = false;
@@ -23,11 +24,17 @@ class HomeController extends GetxController {
   RegExp smallLetterReg = RegExp(r".*[a-z].*");
 
   @override
-  void onInit() {
+  void onInit() async {
     super.onInit();
+    await createBox().then((value) {
+      var email = box1!.get('email');
+      update();
+      if (email != null) {
+        Get.to(() => WelcomeView());
+      }
+    });
     emailController = TextEditingController();
     passwordController = TextEditingController();
-    createBox();
     update();
   }
 
@@ -41,66 +48,49 @@ class HomeController extends GetxController {
   validatePassword(String value) {
     if (value.length <= 7) {
       strongPassword = false;
-      update();
       if (!capLetterReg.hasMatch(value)) {
         capLetterPassword = false;
-        update();
       } else {
         capLetterPassword = true;
-        update();
       }
       if (!smallLetterReg.hasMatch(value)) {
         smallLetterPassword = false;
-        update();
       } else {
         smallLetterPassword = true;
-        update();
       }
       if (!numReg.hasMatch(value)) {
         numLetterPassword = false;
-        update();
       } else {
         numLetterPassword = true;
-        update();
       }
       if (!specReg.hasMatch(value)) {
         specLetterPassword = false;
-        update();
       } else {
         specLetterPassword = true;
-        update();
       }
     } else if (value.length >= 7) {
       strongPassword = true;
-      update();
       if (!capLetterReg.hasMatch(value)) {
         capLetterPassword = false;
-        update();
       } else {
         capLetterPassword = true;
-        update();
       }
       if (!smallLetterReg.hasMatch(value)) {
         smallLetterPassword = false;
-        update();
       } else {
         smallLetterPassword = true;
-        update();
       }
       if (!numReg.hasMatch(value)) {
         numLetterPassword = false;
-        update();
       } else {
         numLetterPassword = true;
-        update();
       }
       if (!specReg.hasMatch(value)) {
         specLetterPassword = false;
-        update();
       } else {
         specLetterPassword = true;
-        update();
       }
+      update();
     }
   }
 
@@ -109,28 +99,27 @@ class HomeController extends GetxController {
     update();
   }
 
-  void createBox() async {
+  Future<void> createBox() async {
     box1 = await Hive.openBox("loginData");
     getData();
   }
 
   void getData() async {
-    if (box1.get('email') != null) {
-      email.text = box1.get('email');
+    if (box1!.get('email') != null) {
+      email.text = box1!.get('email');
       isChecked = true;
-      update();
     }
-    if (box1.get('pass') != null) {
-      pass.text = box1.get('pass');
+    if (box1!.get('pass') != null) {
+      pass.text = box1!.get('pass');
       isChecked = true;
-      update();
     }
+    update();
   }
 
   void login() {
     if (isChecked) {
-      box1.put('email', email.text);
-      box1.put('pass', pass.text);
+      box1!.put('email', email.text);
+      box1!.put('pass', pass.text);
     }
   }
 }

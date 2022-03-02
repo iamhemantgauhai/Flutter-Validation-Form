@@ -5,8 +5,10 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   static const HOME = _Paths.HOME;
+  static const Welcome = _Paths.welcome;
 }
 
 abstract class _Paths {
   static const HOME = '/home';
+  static const welcome = '/welcome';
 }

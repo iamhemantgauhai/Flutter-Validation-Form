@@ -61,7 +61,7 @@ class HomeView extends GetView<HomeController> {
                             const Icon(Icons.email, color: Colors.green),
                       ),
                       keyboardType: TextInputType.emailAddress,
-                      controller: _controller.emailController,
+                      controller: _controller.email,
                       onSaved: (value) {
                         _controller.userEmail = value!;
                       },
@@ -95,7 +95,7 @@ class HomeView extends GetView<HomeController> {
                       ),
                       keyboardType: TextInputType.visiblePassword,
                       obscureText: true,
-                      controller: _controller.passwordController,
+                      controller: _controller.pass,
                       onSaved: (value) {
                         _controller.passWord = value! as RxString;
                       },
@@ -288,7 +288,9 @@ class HomeView extends GetView<HomeController> {
                     const HeightBox(10),
                     GestureDetector(
                       onTap: () {
-                        if (_controller.isChecked) {
+                        if (_controller.isChecked &&
+                            _controller.email.text.isNotEmpty &&
+                            _controller.pass.text.isNotEmpty) {
                           Get.to(WelcomeView());
                         } else {
                           return;
