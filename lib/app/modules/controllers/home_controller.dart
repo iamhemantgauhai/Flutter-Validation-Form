@@ -48,7 +48,6 @@ class HomeController extends GetxController {
       } else {
         capLetterPassword = true;
         update();
-        return "Not valid password";
       }
       if (!smallLetterReg.hasMatch(value)) {
         smallLetterPassword = false;
@@ -56,7 +55,6 @@ class HomeController extends GetxController {
       } else {
         smallLetterPassword = true;
         update();
-        return "Not valid password";
       }
       if (!numReg.hasMatch(value)) {
         numLetterPassword = false;
@@ -64,7 +62,6 @@ class HomeController extends GetxController {
       } else {
         numLetterPassword = true;
         update();
-        return "Not valid password";
       }
       if (!specReg.hasMatch(value)) {
         specLetterPassword = false;
@@ -82,7 +79,6 @@ class HomeController extends GetxController {
       } else {
         capLetterPassword = true;
         update();
-        return "Not valid password";
       }
       if (!smallLetterReg.hasMatch(value)) {
         smallLetterPassword = false;
@@ -90,7 +86,6 @@ class HomeController extends GetxController {
       } else {
         smallLetterPassword = true;
         update();
-        return "Not valid password";
       }
       if (!numReg.hasMatch(value)) {
         numLetterPassword = false;
@@ -98,7 +93,6 @@ class HomeController extends GetxController {
       } else {
         numLetterPassword = true;
         update();
-        return "Not valid password";
       }
       if (!specReg.hasMatch(value)) {
         specLetterPassword = false;
