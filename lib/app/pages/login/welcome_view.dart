@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
-import 'package:new_login/app/modules/controllers/home_controller.dart';
+import 'package:new_login/app/pages/login/home_controller.dart';
 
 class WelcomeView extends StatelessWidget {
   WelcomeView({Key? key}) : super(key: key);

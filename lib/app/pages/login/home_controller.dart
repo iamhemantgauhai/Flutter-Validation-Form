@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:new_login/app/modules/views/welcome_view.dart';
+import 'package:new_login/app/pages/login/welcome_view.dart';
 
 class HomeController extends GetxController {
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
@@ -48,49 +48,66 @@ class HomeController extends GetxController {
   validatePassword(String value) {
     if (value.length <= 7) {
       strongPassword = false;
+      update();
       if (!capLetterReg.hasMatch(value)) {
         capLetterPassword = false;
+        update();
       } else {
         capLetterPassword = true;
+        update();
       }
       if (!smallLetterReg.hasMatch(value)) {
         smallLetterPassword = false;
+        update();
       } else {
         smallLetterPassword = true;
+        update();
       }
       if (!numReg.hasMatch(value)) {
         numLetterPassword = false;
+        update();
       } else {
         numLetterPassword = true;
+        update();
       }
       if (!specReg.hasMatch(value)) {
         specLetterPassword = false;
+        update();
       } else {
         specLetterPassword = true;
+        update();
       }
     } else if (value.length >= 7) {
       strongPassword = true;
+      update();
       if (!capLetterReg.hasMatch(value)) {
         capLetterPassword = false;
+        update();
       } else {
         capLetterPassword = true;
+        update();
       }
       if (!smallLetterReg.hasMatch(value)) {
         smallLetterPassword = false;
+        update();
       } else {
         smallLetterPassword = true;
+        update();
       }
       if (!numReg.hasMatch(value)) {
         numLetterPassword = false;
+        update();
       } else {
         numLetterPassword = true;
+        update();
       }
       if (!specReg.hasMatch(value)) {
         specLetterPassword = false;
+        update();
       } else {
         specLetterPassword = true;
+        update();
       }
-      update();
     }
   }
 

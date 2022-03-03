@@ -2,10 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:new_login/app/modules/views/welcome_view.dart';
+import 'package:new_login/app/pages/login/welcome_view.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-import '../controllers/home_controller.dart';
+import 'home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);

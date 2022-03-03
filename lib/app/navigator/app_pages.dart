@@ -2,8 +2,8 @@
 
 import 'package:get/get.dart';
 
-import '../modules/bindings/home_binding.dart';
-import '../modules/views/home_view.dart';
+import '../pages/login/home_binding.dart';
+import '../pages/login/home_view.dart';
 
 part 'app_routes.dart';
 
