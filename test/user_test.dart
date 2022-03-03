@@ -3,8 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'test_helpers.dart';
 
 void main() {
-  test('test 1', () {
-    // The model should be able to receive the following data:
+  test('Data Check', () {
     final user = UserModel(
       userId: 1,
       id: 1,
