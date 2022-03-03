@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:new_login/app/pages/login/welcome_view.dart';
+// import 'package:new_login/app/pages/login/welcome_view.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'home_controller.dart';
@@ -291,7 +291,7 @@ class HomeView extends GetView<HomeController> {
                         if (_controller.isChecked &&
                             _controller.email.text.isNotEmpty &&
                             _controller.pass.text.isNotEmpty) {
-                          Get.to(WelcomeView());
+                          // Get.to(WelcomeView());
                         } else {
                           return;
                         }
