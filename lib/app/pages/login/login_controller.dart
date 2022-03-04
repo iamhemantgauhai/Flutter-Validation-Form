@@ -49,7 +49,9 @@ class HomeController extends GetxController {
   }
 
   validatePassword(String value) {
-    if (value.length <= 7) {
+    if (value.isEmpty) {
+      return "Provide valid Password";
+    } else if (value.length <= 7) {
       strongPassword = false;
       update();
       if (!capLetterReg.hasMatch(value)) {

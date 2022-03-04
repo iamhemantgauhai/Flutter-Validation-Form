@@ -26,12 +26,12 @@ class LoginWidgets extends StatelessWidget {
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 child: Column(
                   children: [
-                    const Text('Login'),
+                    const Text('Login Here',style: TextStyle(fontSize: 25, color: Colors.black87),),
                     const SizedBox(
-                      height: 80,
+                      height: 20,
                     ),
                     const Text(
-                      "Welcome to Appscrip Company",
+                      "Login to Appscrip Company",
                       style: TextStyle(fontSize: 20, color: Colors.black87),
                     ),
                     const SizedBox(
