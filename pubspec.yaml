@@ -39,6 +39,7 @@ dependencies:
   hive_flutter:
   http:
   shared_preferences:
+  flutter_screenutil:
   mockito:
 
 dev_dependencies:
