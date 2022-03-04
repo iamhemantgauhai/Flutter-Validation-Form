@@ -26,11 +26,9 @@ class LoginWidgets extends StatelessWidget {
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 child: Column(
                   children: [
-                    Image.network(
-                      "https://media.designrush.com/agencies/113271/conversions/Appscrip-(3-Embed-Technologies)-logo-profile.jpg",
-                    ),
+                    const Text('Login'),
                     const SizedBox(
-                      height: 20,
+                      height: 80,
                     ),
                     const Text(
                       "Welcome to Appscrip Company",
