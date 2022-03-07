@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:new_login/app/pages/login/login_controller.dart';
-import 'package:new_login/app/pages/dashboard/welcome_view.dart';
+import 'package:new_login/app/pages/dashboard/dashboard_view.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class LoginWidgets extends StatelessWidget {

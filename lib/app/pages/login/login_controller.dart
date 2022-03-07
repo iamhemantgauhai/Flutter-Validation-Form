@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:new_login/app/pages/login/login_presenter.dart';
-// import 'package:new_login/app/pages/login/welcome_view.dart';
 
 class HomeController extends GetxController {
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();

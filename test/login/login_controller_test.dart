@@ -3,11 +3,10 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
 import 'package:new_login/app/pages/login/login_controller.dart';
-// import 'package:image_test_utils/image_test_utils.dart';
 import 'package:new_login/app/pages/login/login_views.dart';
 import 'package:new_login/app/pages/login/widgets/login_widgets.dart';
 
-import 'variable.dart';
+import '../variable.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -16,8 +15,9 @@ void main() {
     'Login Check',
     (tester) async {
       Variable.loginBinding.builder();
-      await tester
-          .pumpWidget(Variable.getTheMaterialAppWrapper(const HomeView()));
+      await tester.pumpWidget(Variable.getTheMaterialAppWrapper(
+        const HomeView(),
+      ));
       final login = find.byKey(LoginWidgets.loginKey);
       final email = find.byKey(LoginWidgets.emailKey);
       final password = find.byKey(LoginWidgets.passwordKey);
