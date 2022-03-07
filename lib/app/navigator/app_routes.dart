@@ -8,7 +8,7 @@ abstract class Routes {
   static const splash = Paths.splash;
   static const logIn = Paths.logIn;
   static const signup = Paths.signup;
-  static const HOME = _Paths.HOME;
+  static const home = Paths.home;
   static const loginOtp = Paths.loginOtp;
   static const forgotPassword = Paths.forgotPassword;
   static const myList = Paths.myList;
@@ -22,10 +22,6 @@ abstract class Routes {
   static const lobby = Paths.lobby;
   static const reportAProblem = Paths.reportAProblem;
   static const termsAndPolicy = Paths.termsAndPolicy;
-}
-
-abstract class _Paths {
-  static const HOME = '/home';
 }
 
 abstract class Paths {

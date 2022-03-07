@@ -3,9 +3,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
 import 'package:new_login/app/pages/dashboard/widgets/dashboard_widgets.dart';
-import 'package:new_login/app/pages/login/login_views.dart';
+import 'package:new_login/app/pages/login/login.dart';
 import 'package:new_login/app/pages/login/widgets/login_widgets.dart';
-
 import '../variable.dart';
 
 void main() {
@@ -17,7 +16,7 @@ void main() {
       Variable.loginBinding.builder();
       Variable.dashBoardBinding.builder();
       await tester.pumpWidget(Variable.getTheMaterialAppWrapper(
-        const HomeView(),
+        const LoginView(),
       ));
       final login = find.byKey(LoginWidgets.loginKey);
       final email = find.byKey(LoginWidgets.emailKey);
