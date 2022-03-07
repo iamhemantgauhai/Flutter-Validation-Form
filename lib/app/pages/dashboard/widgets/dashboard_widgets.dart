@@ -6,8 +6,8 @@ import 'package:get/get.dart';
 import '../../login/login_controller.dart';
 
 class WelcomeWidgets extends StatelessWidget {
-  WelcomeWidgets({Key? key}) : super(key: key);
-  final scaffoldKey = GlobalKey<FormState>();
+  const WelcomeWidgets({Key? key}) : super(key: key);
+  // final scaffoldKey = GlobalKey<FormState>();
   static const dataKey = Key('Data_key');
   static const backKey = Key('Back_key');
 

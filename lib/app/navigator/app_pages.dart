@@ -9,7 +9,7 @@ import 'package:new_login/app/pages/splash/splash.dart';
 part 'app_routes.dart';
 
 class AppPages {
-  static const INITIAL = Routes.splash;
+  static const INITIAL = Routes.logIn;
 
   static final routes = [
     GetPage<LoginView>(
