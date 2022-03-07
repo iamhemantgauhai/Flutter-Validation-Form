@@ -13,7 +13,7 @@ class LoginWidgets extends StatelessWidget {
   static const passwordKey = Key('Password_key');
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<HomeController>(
+    return GetBuilder<LoginController>(
       builder: (_controller) {
         return SafeArea(
           child: Container(

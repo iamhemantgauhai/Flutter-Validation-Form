@@ -17,7 +17,7 @@ class WelcomeWidgets extends StatelessWidget {
       appBar: AppBar(
         title: const Text('WelcomeView'),
       ),
-      body: GetBuilder<HomeController>(
+      body: GetBuilder<LoginController>(
         builder: (controller) => Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

@@ -31,7 +31,7 @@ void main() {
     "Valid Email & Password",
     () async {
       Variable.loginBinding.builder();
-      var controller = Get.find<HomeController>();
+      var controller = Get.find<LoginController>();
       String? result1 = controller.validateEmail("");
       expect(result1, "Provide valid Email");
       String? result2 = controller.validateEmail("hemanth@appscrip.co");

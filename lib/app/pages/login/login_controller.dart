@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:new_login/app/pages/login/login_presenter.dart';
 
-class HomeController extends GetxController {
+class LoginController extends GetxController {
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
-  HomePresenter homePresenter;
-  HomeController(this.homePresenter);
+  LoginPresenter loginPresenter;
+  LoginController(this.loginPresenter);
   late TextEditingController emailController, passwordController;
   Box? box1;
   var userEmail = '';

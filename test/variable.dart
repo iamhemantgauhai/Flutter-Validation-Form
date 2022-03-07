@@ -11,9 +11,9 @@ abstract class Variable {
   static final loginBinding = BindingsBuilder<dynamic>(
     () {
       Get.lazyPut(
-        () => HomeController(
+        () => LoginController(
           Get.put(
-            HomePresenter(
+            LoginPresenter(
               Get.put(
                 AuthCase(),
               ),
