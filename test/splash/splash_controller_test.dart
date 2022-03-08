@@ -12,7 +12,7 @@ void main() {
   Get.testMode = true;
   Get.addPages(AppPages.routes);
   Variable.splashBinding.builder();
-  testWidgets('Splash Screen Test', (tester) async {
+  testWidgets('Splash Screen Test', (WidgetTester tester) async {
     final data = find.byKey(SplashWidget.containKey);
     expect(data, findsNothing);
     debugPrint("Got 0 Widget.");

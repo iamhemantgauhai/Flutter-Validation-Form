@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:new_login/app/pages/dashboard/dashboard_controller.dart';
-import 'package:new_login/app/pages/dashboard/dashboard_presenter.dart';
-import 'package:new_login/app/pages/login/login_controller.dart';
-import 'package:new_login/app/pages/login/login_presenter.dart';
-import 'package:new_login/app/pages/splash/splash_conroller.dart';
-import 'package:new_login/app/pages/splash/splash_presenter.dart';
+import 'package:get/get.dart';
+import 'package:new_login/app/app.dart';
 import 'package:new_login/domain/usecases/auth_usecases.dart';
 
 abstract class Variable {
   static final splashBinding = BindingsBuilder<dynamic>(
-        () {
+    () {
       Get.lazyPut(
-            () => SplashController(
+        () => SplashController(
           Get.put(
             SplashPresenter(
               Get.put(
