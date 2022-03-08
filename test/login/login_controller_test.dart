@@ -18,7 +18,9 @@ void main() {
         const LoginView(),
       ));
       final login = find.byKey(LoginWidgets.loginKey);
+      expect(login, findsOneWidget);
       final email = find.byKey(LoginWidgets.emailKey);
+      expect(email, findsOneWidget);
       final password = find.byKey(LoginWidgets.passwordKey);
       expect(password, findsOneWidget);
       await tester.enterText(email, 'hemantgauhai@gmail.com');

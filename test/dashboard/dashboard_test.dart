@@ -27,7 +27,7 @@ void main() {
       await tester.enterText(password, '!@#123asdASD');
       await tester.tap(login);
       await tester.pumpWidget(Variable.getTheMaterialAppWrapper(
-        DashBoardWidget(),
+        const DashBoardWidget(),
       ));
       expect(data, findsOneWidget);
       await tester.tap(logOut);

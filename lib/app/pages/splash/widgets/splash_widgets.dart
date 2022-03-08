@@ -12,7 +12,7 @@ class SplashWidget extends StatelessWidget{
       builder: (context) {
         return Container(
             color: Colors.white,
-            child:const FlutterLogo()
+            child:const FlutterLogo(),
         );
       }
     );

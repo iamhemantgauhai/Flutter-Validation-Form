@@ -6,8 +6,7 @@ import 'package:get/get.dart';
 import '../../login/login_controller.dart';
 
 class DashBoardWidget extends StatelessWidget {
-  const DashBoardWidget({Key? key}) : super(key: key);
-  // final scaffoldKey = GlobalKey<FormState>();
+   const DashBoardWidget({Key? key}) : super(key: key);
   static const dataKey = Key('Data_key');
   static const backKey = Key('Back_key');
 
@@ -24,6 +23,7 @@ class DashBoardWidget extends StatelessWidget {
             Center(
               child: Text(
                 'Email: ${controller.email.text}',
+                textDirection: TextDirection.ltr,
                 key: dataKey,
               ),
             ),

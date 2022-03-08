@@ -4,7 +4,6 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:new_login/app/pages/login/login_presenter.dart';
 
 class LoginController extends GetxController {
-  GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
   LoginPresenter loginPresenter;
   LoginController(this.loginPresenter);
   late TextEditingController emailController, passwordController;
@@ -24,21 +23,6 @@ class LoginController extends GetxController {
   RegExp specReg = RegExp(r".*[!@#\$&*~].*");
   RegExp capLetterReg = RegExp(r".*[A-Z].*");
   RegExp smallLetterReg = RegExp(r".*[a-z].*");
-
-  @override
-  void onInit() async {
-    super.onInit();
-    // await createBox().then((value) {
-    //   var email = box1!.get('email');
-    //   update();
-    //   if (email != null) {
-    //     Get.to(() => const WelcomeView());
-    //   }
-    // });
-    emailController = TextEditingController();
-    passwordController = TextEditingController();
-    update();
-  }
 
   String? validateEmail(String value) {
     if (!GetUtils.isEmail(value)) {
