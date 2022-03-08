@@ -308,7 +308,7 @@ class LoginWidgets extends StatelessWidget {
                             if (_controller.isChecked &&
                                 _controller.email.text.isNotEmpty &&
                                 _controller.pass.text.isNotEmpty) {
-                              Get.to(const WelcomeView());
+                              Get.to(const DashBoardView());
                             } else {
                               return;
                             }

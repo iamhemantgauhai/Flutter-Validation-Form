@@ -12,7 +12,7 @@ void main() async {
     GetMaterialApp(
       title: "Application",
       getPages: AppPages.routes,
-      initialRoute: AppPages.INITIAL,
+      initialRoute: AppPages.initial,
       debugShowCheckedModeBanner: false,
     ),
   );

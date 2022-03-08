@@ -7,6 +7,7 @@ part of 'app_pages.dart';
 abstract class Routes {
   static const splash = Paths.splash;
   static const logIn = Paths.logIn;
+  static const dashBoard = Paths.dashBoard;
   static const signup = Paths.signup;
   static const home = Paths.home;
   static const loginOtp = Paths.loginOtp;
@@ -27,6 +28,7 @@ abstract class Routes {
 abstract class Paths {
   static const splash = '/splash-screen';
   static const logIn = '/log-in-screen';
+  static const dashBoard = '/dash-board-screen';
   static const signup = '/sign-up-screen';
   static const home = '/home-screen';
   static const loginOtp = '/login-otp-screen';

@@ -20,6 +20,7 @@ void main() {
       final login = find.byKey(LoginWidgets.loginKey);
       final email = find.byKey(LoginWidgets.emailKey);
       final password = find.byKey(LoginWidgets.passwordKey);
+      expect(password, findsOneWidget);
       await tester.enterText(email, 'hemantgauhai@gmail.com');
       await tester.enterText(password, '!@#123asdASD');
       await tester.tap(login);

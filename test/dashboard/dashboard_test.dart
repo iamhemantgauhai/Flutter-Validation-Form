@@ -21,13 +21,13 @@ void main() {
       final login = find.byKey(LoginWidgets.loginKey);
       final email = find.byKey(LoginWidgets.emailKey);
       final password = find.byKey(LoginWidgets.passwordKey);
-      final data = find.byKey(WelcomeWidgets.dataKey);
-      final logOut = find.byKey(WelcomeWidgets.backKey);
+      final data = find.byKey(DashBoardWidget.dataKey);
+      final logOut = find.byKey(DashBoardWidget.backKey);
       await tester.enterText(email, 'h@g.co');
       await tester.enterText(password, '!@#123asdASD');
       await tester.tap(login);
       await tester.pumpWidget(Variable.getTheMaterialAppWrapper(
-        WelcomeWidgets(),
+        DashBoardWidget(),
       ));
       expect(data, findsOneWidget);
       await tester.tap(logOut);

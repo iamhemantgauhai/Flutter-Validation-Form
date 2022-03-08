@@ -9,6 +9,6 @@ class SplashController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    Timer(const Duration(milliseconds: 3), () => Get.off(const LoginView()));
+    Future.delayed(const Duration(milliseconds: 3), () => Get.off(const LoginView()));
   }
 }
