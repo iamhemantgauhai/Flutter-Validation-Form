@@ -8,9 +8,13 @@ class SplashWidget extends StatelessWidget{
   final controller = Get.put(SplashController);
   @override
   Widget build(BuildContext context) {
-    return Container(
-        color: Colors.white,
-        child:FlutterLogo(size:MediaQuery.of(context).size.height)
+    return GetBuilder<SplashController>(
+      builder: (context) {
+        return Container(
+            color: Colors.white,
+            child:const FlutterLogo()
+        );
+      }
     );
   }
 }
