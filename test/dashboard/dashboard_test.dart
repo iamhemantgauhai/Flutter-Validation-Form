@@ -23,7 +23,7 @@ void main() {
       final password = find.byKey(LoginWidgets.passwordKey);
       final data = find.byKey(DashBoardWidget.dataKey);
       final logOut = find.byKey(DashBoardWidget.backKey);
-      await tester.enterText(email, 'h@g.co');
+      await tester.enterText(email, 'alex@gmail.co');
       await tester.enterText(password, '!@#123asdASD');
       await tester.tap(login);
       await tester.pumpWidget(Variable.getTheMaterialAppWrapper(
