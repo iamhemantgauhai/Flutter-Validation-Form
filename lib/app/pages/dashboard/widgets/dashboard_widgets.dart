@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:new_login/app/navigator/app_pages.dart';
 
 import '../../login/login_controller.dart';
 
@@ -32,9 +33,7 @@ class DashBoardWidget extends StatelessWidget {
                 key: backKey,
                 child: const Text('Log Out'),
                 onPressed: () async {
-                  // var box1 = await Hive.openBox("loginData");
-                  // box1.clear();
-                  Get.back();
+                  Get.offAndToNamed(Paths.logIn);
                 },
                 color: Colors.blue,
               ),

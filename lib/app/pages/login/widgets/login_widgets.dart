@@ -299,8 +299,6 @@ class LoginWidgets extends StatelessWidget {
                         return;
                       }
                       print("Login Clicked Event");
-                      _controller.login();
-                      _controller.getData();
                     },
                     child: "Login"
                         .text
