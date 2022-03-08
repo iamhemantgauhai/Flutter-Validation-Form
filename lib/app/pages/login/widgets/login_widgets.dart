@@ -294,7 +294,7 @@ class LoginWidgets extends StatelessWidget {
                       if (_controller.isChecked &&
                           _controller.email.text.isNotEmpty &&
                           _controller.pass.text.isNotEmpty) {
-                        Get.toNamed(Paths.dashBoard);
+                        Get.offAndToNamed(Paths.dashBoard);
                       } else {
                         return;
                       }

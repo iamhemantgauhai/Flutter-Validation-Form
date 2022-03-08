@@ -40,6 +40,9 @@ dependencies:
   http:
   shared_preferences:
   flutter_screenutil:
+  splashscreen:
+  flutter_driver:
+    sdk: flutter
 
 dev_dependencies:
   build_runner:
