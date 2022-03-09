@@ -4,7 +4,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
 import 'package:new_login/app/app.dart';
 import 'package:new_login/app/pages/dashboard/widgets/dashboard_widgets.dart';
-
 import '../variable.dart';
 
 void main() {
