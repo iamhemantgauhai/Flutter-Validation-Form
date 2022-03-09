@@ -2,6 +2,7 @@
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
+import 'package:new_login/app/app.dart';
 import 'package:new_login/app/pages/login/login.dart';
 import 'package:new_login/app/pages/login/widgets/login_widgets.dart';
 
@@ -10,6 +11,7 @@ import '../variable.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   Get.testMode = true;
+<<<<<<< HEAD
   testWidgets(
     'Login Check',
     (WidgetTester tester) async {
@@ -28,6 +30,17 @@ void main() {
       await tester.tap(login);
     },
   );
+=======
+  testWidgets('Login Check', (WidgetTester tester) async {
+    Variable.loginBinding.builder();
+    await tester
+        .pumpWidget(Variable.getTheMaterialAppWrapper(const LoginView()));
+    await tester.pumpAndSettle();
+    expect(find.byKey(LoginWidgets.loginKey), findsOneWidget);
+    expect(find.byKey(LoginWidgets.emailKey), findsOneWidget);
+    expect(find.byKey(LoginWidgets.passwordKey), findsOneWidget);
+  });
+>>>>>>> 860ee24e428de9c9444439783cc687d515818364
 
   test(
     "Valid Email & Password",

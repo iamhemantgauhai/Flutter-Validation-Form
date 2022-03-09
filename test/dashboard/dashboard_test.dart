@@ -2,13 +2,19 @@
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
+import 'package:new_login/app/app.dart';
 import 'package:new_login/app/pages/dashboard/widgets/dashboard_widgets.dart';
+<<<<<<< HEAD
 import 'package:new_login/app/pages/login/login.dart';
+=======
+
+>>>>>>> 860ee24e428de9c9444439783cc687d515818364
 import '../variable.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   Get.testMode = true;
+<<<<<<< HEAD
   testWidgets(
     'Login Check',
     (WidgetTester tester) async {
@@ -24,4 +30,16 @@ void main() {
       expect(data, findsOneWidget);
     },
   );
+=======
+  testWidgets('DashBoard Test', (WidgetTester tester) async {
+    Variable.dashBoardBinding.builder();
+    Variable.loginBinding.builder();
+    await tester
+        .pumpWidget(Variable.getTheMaterialAppWrapper(const LoginView()));
+    await tester
+        .pumpWidget(Variable.getTheMaterialAppWrapper(const DashBoardView()));
+    await tester.pumpAndSettle();
+    expect(find.byKey(DashBoardWidget.dataKey), findsOneWidget);
+  });
+>>>>>>> 860ee24e428de9c9444439783cc687d515818364
 }
