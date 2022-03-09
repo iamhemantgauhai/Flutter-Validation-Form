@@ -29,15 +29,6 @@ void main() {
       await tester.tap(login);
     },
   );
-  testWidgets('Login Check', (WidgetTester tester) async {
-    Variable.loginBinding.builder();
-    await tester
-        .pumpWidget(Variable.getTheMaterialAppWrapper(const LoginView()));
-    await tester.pumpAndSettle();
-    expect(find.byKey(LoginWidgets.loginKey), findsOneWidget);
-    expect(find.byKey(LoginWidgets.emailKey), findsOneWidget);
-    expect(find.byKey(LoginWidgets.passwordKey), findsOneWidget);
-  });
 
   test(
     "Valid Email & Password",
