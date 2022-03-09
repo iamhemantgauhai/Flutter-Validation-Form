@@ -11,7 +11,6 @@ import '../variable.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   Get.testMode = true;
-<<<<<<< HEAD
   testWidgets(
     'Login Check',
     (WidgetTester tester) async {
@@ -30,7 +29,6 @@ void main() {
       await tester.tap(login);
     },
   );
-=======
   testWidgets('Login Check', (WidgetTester tester) async {
     Variable.loginBinding.builder();
     await tester
@@ -40,7 +38,6 @@ void main() {
     expect(find.byKey(LoginWidgets.emailKey), findsOneWidget);
     expect(find.byKey(LoginWidgets.passwordKey), findsOneWidget);
   });
->>>>>>> 860ee24e428de9c9444439783cc687d515818364
 
   test(
     "Valid Email & Password",
