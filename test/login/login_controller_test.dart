@@ -12,7 +12,7 @@ void main() {
   Get.testMode = true;
   testWidgets(
     'Login Check',
-    (tester) async {
+    (WidgetTester tester) async {
       Variable.loginBinding.builder();
       await tester.pumpWidget(Variable.getTheMaterialAppWrapper(
         const LoginView(),
