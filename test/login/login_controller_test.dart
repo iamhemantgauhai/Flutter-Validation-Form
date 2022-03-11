@@ -11,15 +11,24 @@ import '../variable.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   Get.testMode = true;
-  testWidgets('Login Check', (WidgetTester tester) async {
-    Variable.loginBinding.builder();
-    await tester
-        .pumpWidget(Variable.getTheMaterialAppWrapper(const LoginView()));
-    await tester.pumpAndSettle();
-    expect(find.byKey(LoginWidgets.loginKey), findsOneWidget);
-    expect(find.byKey(LoginWidgets.emailKey), findsOneWidget);
-    expect(find.byKey(LoginWidgets.passwordKey), findsOneWidget);
-  });
+  testWidgets(
+    'Login Check',
+    (WidgetTester tester) async {
+      Variable.loginBinding.builder();
+      await tester.pumpWidget(Variable.getTheMaterialAppWrapper(
+        const LoginView(),
+      ));
+      final login = find.byKey(LoginWidgets.loginKey);
+      expect(login, findsOneWidget);
+      final email = find.byKey(LoginWidgets.emailKey);
+      expect(email, findsOneWidget);
+      final password = find.byKey(LoginWidgets.passwordKey);
+      expect(password, findsOneWidget);
+      await tester.enterText(email, 'hemantgauhai@gmail.com');
+      await tester.enterText(password, '!@#123asdASD');
+      await tester.tap(login);
+    },
+  );
 
   test(
     "Valid Email & Password",
