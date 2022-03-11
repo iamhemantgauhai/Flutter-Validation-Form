@@ -15,11 +15,11 @@ void main() {
   testWidgets('Splash Screen Test', (WidgetTester tester) async {
     final data = find.byKey(SplashWidget.containKey);
     expect(data, findsNothing);
-    debugPrint("Got 0 Widget.");
+    debugPrint("1st-Got 0 Widget.");
     await tester.pumpWidget(Variable.getTheMaterialAppWrapper(
       const SplashView(),
     ));
     expect(data, findsOneWidget);
-    debugPrint("Got 1 Widget.");
+    debugPrint("2nd-Got 1 Widget.");
   });
 }
