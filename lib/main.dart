@@ -11,7 +11,7 @@ void main() async {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Application",
+      title: "Papi Application",
       getPages: AppPages.routes,
       initialRoute: AppPages.initial,
     ),

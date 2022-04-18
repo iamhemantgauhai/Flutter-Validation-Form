@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../splash_conroller.dart';
+import '../splash_controller.dart';
 
 class SplashWidget extends StatelessWidget{
   SplashWidget({Key? key}) : super(key: key);
@@ -14,7 +14,7 @@ class SplashWidget extends StatelessWidget{
         return Container(
           key: containKey,
             color: Colors.white,
-            child:Image.network('https://wallpapercave.com/uwp/uwp77938.jpeg'),
+            child: Image.asset('images/PapiLogo.jpeg'),
         );
       }
     );
