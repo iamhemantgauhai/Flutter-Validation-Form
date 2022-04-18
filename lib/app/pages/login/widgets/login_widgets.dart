@@ -16,7 +16,8 @@ class LoginWidgets extends StatelessWidget {
     return GetBuilder<LoginController>(
       builder: (_controller) => SafeArea(
         child: Container(
-          margin: const EdgeInsets.only(top: 60, left: 16, right: 16),
+          // decoration: const BoxDecoration(image: DecorationImage(image:NetworkImage('https://wallpaperaccess.com/full/1622640.jpg'),fit: BoxFit.cover)),
+          padding: const EdgeInsets.only(top: 100, left: 16, right: 16),
           width: context.width,
           height: context.height,
           child: SingleChildScrollView(
@@ -26,15 +27,8 @@ class LoginWidgets extends StatelessWidget {
               child: Column(
                 children: [
                   const Text(
-                    'Login Here',
-                    style: TextStyle(fontSize: 25, color: Colors.black87),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  const Text(
-                    "Login to Appscrip Company",
-                    style: TextStyle(fontSize: 20, color: Colors.black87),
+                    "Login to PaPi's World !",
+                    style: TextStyle(fontSize: 20, color: Colors.black),
                   ),
                   const SizedBox(
                     height: 20,
@@ -58,7 +52,7 @@ class LoginWidgets extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25.0),
                       ),
                       hintText: "Email",
-                      hintStyle: const TextStyle(color: Colors.grey),
+                      hintStyle: const TextStyle(color: Colors.black),
                       prefixIcon: const Icon(Icons.email, color: Colors.green),
                     ),
                     keyboardType: TextInputType.emailAddress,
@@ -92,7 +86,7 @@ class LoginWidgets extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25.0),
                       ),
                       hintText: "Password",
-                      hintStyle: const TextStyle(color: Colors.grey),
+                      hintStyle: const TextStyle(color: Colors.black),
                       prefixIcon: const Icon(Icons.lock, color: Colors.green),
                     ),
                     keyboardType: TextInputType.visiblePassword,
@@ -108,175 +102,175 @@ class LoginWidgets extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Every condition must be checked:\n',
-                      ),
-                      Row(
-                        children: [
-                          AnimatedContainer(
-                            duration: const Duration(milliseconds: 500),
-                            width: 20,
-                            height: 20,
-                            decoration: BoxDecoration(
-                                color: _controller.strongPassword
-                                    ? Colors.green
-                                    : Colors.transparent,
-                                border: _controller.strongPassword
-                                    ? Border.all(color: Colors.transparent)
-                                    : Border.all(color: Colors.grey.shade400),
-                                borderRadius: BorderRadius.circular(50)),
-                            child: const Center(
-                              child: Icon(
-                                Icons.check,
-                                color: Colors.white,
-                                size: 15,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          const Text("Contains at least 8 Characters.")
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          AnimatedContainer(
-                            duration: const Duration(milliseconds: 500),
-                            width: 20,
-                            height: 20,
-                            decoration: BoxDecoration(
-                                color: _controller.numLetterPassword
-                                    ? Colors.green
-                                    : Colors.transparent,
-                                border: _controller.numLetterPassword
-                                    ? Border.all(color: Colors.transparent)
-                                    : Border.all(color: Colors.grey.shade400),
-                                borderRadius: BorderRadius.circular(50)),
-                            child: const Center(
-                              child: Icon(
-                                Icons.check,
-                                color: Colors.white,
-                                size: 15,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          const Text("Contains at least 1 Number.")
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          AnimatedContainer(
-                            duration: const Duration(milliseconds: 500),
-                            width: 20,
-                            height: 20,
-                            decoration: BoxDecoration(
-                                color: _controller.capLetterPassword
-                                    ? Colors.green
-                                    : Colors.transparent,
-                                border: _controller.capLetterPassword
-                                    ? Border.all(color: Colors.transparent)
-                                    : Border.all(color: Colors.grey.shade400),
-                                borderRadius: BorderRadius.circular(50)),
-                            child: const Center(
-                              child: Icon(
-                                Icons.check,
-                                color: Colors.white,
-                                size: 15,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          const Text("Contains at least 1 Capital letter.")
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          AnimatedContainer(
-                            duration: const Duration(milliseconds: 500),
-                            width: 20,
-                            height: 20,
-                            decoration: BoxDecoration(
-                                color: _controller.smallLetterPassword
-                                    ? Colors.green
-                                    : Colors.transparent,
-                                border: _controller.smallLetterPassword
-                                    ? Border.all(color: Colors.transparent)
-                                    : Border.all(color: Colors.grey.shade400),
-                                borderRadius: BorderRadius.circular(50)),
-                            child: const Center(
-                              child: Icon(
-                                Icons.check,
-                                color: Colors.white,
-                                size: 15,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          const Text("Contains at least 1 Small letter.")
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          AnimatedContainer(
-                            duration: const Duration(milliseconds: 500),
-                            width: 20,
-                            height: 20,
-                            decoration: BoxDecoration(
-                                color: _controller.specLetterPassword
-                                    ? Colors.green
-                                    : Colors.transparent,
-                                border: _controller.specLetterPassword
-                                    ? Border.all(color: Colors.transparent)
-                                    : Border.all(color: Colors.grey.shade400),
-                                borderRadius: BorderRadius.circular(50)),
-                            child: const Center(
-                              child: Icon(
-                                Icons.check,
-                                color: Colors.white,
-                                size: 15,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          const Text("Contains at least 1 Special character.")
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 16,
-                      ),
-                    ],
-                  ),
+                  // Column(
+                  //   crossAxisAlignment: CrossAxisAlignment.start,
+                  //   children: [
+                  //     const Text(
+                  //       'Every condition must be checked:\n',style: TextStyle(color: Colors.black),
+                  //     ),
+                  //     Row(
+                  //       children: [
+                  //         AnimatedContainer(
+                  //           duration: const Duration(milliseconds: 500),
+                  //           width: 20,
+                  //           height: 20,
+                  //           decoration: BoxDecoration(
+                  //               color: _controller.strongPassword
+                  //                   ? Colors.green
+                  //                   : Colors.transparent,
+                  //               border: _controller.strongPassword
+                  //                   ? Border.all(color: Colors.transparent)
+                  //                   : Border.all(color: Colors.black),
+                  //               borderRadius: BorderRadius.circular(50)),
+                  //           child: const Center(
+                  //             child: Icon(
+                  //               Icons.check,
+                  //               color: Colors.black,
+                  //               size: 15,
+                  //             ),
+                  //           ),
+                  //         ),
+                  //         const SizedBox(
+                  //           width: 10,
+                  //         ),
+                  //         const Text("Contains at least 8 Characters.",style: TextStyle(color: Colors.black))
+                  //       ],
+                  //     ),
+                  //     const SizedBox(
+                  //       height: 10,
+                  //     ),
+                  //     Row(
+                  //       children: [
+                  //         AnimatedContainer(
+                  //           duration: const Duration(milliseconds: 500),
+                  //           width: 20,
+                  //           height: 20,
+                  //           decoration: BoxDecoration(
+                  //               color: _controller.numLetterPassword
+                  //                   ? Colors.green
+                  //                   : Colors.transparent,
+                  //               border: _controller.numLetterPassword
+                  //                   ? Border.all(color: Colors.transparent)
+                  //                   : Border.all(color: Colors.black),
+                  //               borderRadius: BorderRadius.circular(50)),
+                  //           child: const Center(
+                  //             child: Icon(
+                  //               Icons.check,
+                  //               color: Colors.black,
+                  //               size: 15,
+                  //             ),
+                  //           ),
+                  //         ),
+                  //         const SizedBox(
+                  //           width: 10,
+                  //         ),
+                  //         const Text("Contains at least 1 Number.",style: TextStyle(color: Colors.black))
+                  //       ],
+                  //     ),
+                  //     const SizedBox(
+                  //       height: 10,
+                  //     ),
+                  //     Row(
+                  //       children: [
+                  //         AnimatedContainer(
+                  //           duration: const Duration(milliseconds: 500),
+                  //           width: 20,
+                  //           height: 20,
+                  //           decoration: BoxDecoration(
+                  //               color: _controller.capLetterPassword
+                  //                   ? Colors.green
+                  //                   : Colors.transparent,
+                  //               border: _controller.capLetterPassword
+                  //                   ? Border.all(color: Colors.transparent)
+                  //                   : Border.all(color: Colors.black),
+                  //               borderRadius: BorderRadius.circular(50)),
+                  //           child: const Center(
+                  //             child: Icon(
+                  //               Icons.check,
+                  //               color: Colors.black,
+                  //               size: 15,
+                  //             ),
+                  //           ),
+                  //         ),
+                  //         const SizedBox(
+                  //           width: 10,
+                  //         ),
+                  //         const Text("Contains at least 1 Capital letter.",style: TextStyle(color: Colors.black))
+                  //       ],
+                  //     ),
+                  //     const SizedBox(
+                  //       height: 10,
+                  //     ),
+                  //     Row(
+                  //       children: [
+                  //         AnimatedContainer(
+                  //           duration: const Duration(milliseconds: 500),
+                  //           width: 20,
+                  //           height: 20,
+                  //           decoration: BoxDecoration(
+                  //               color: _controller.smallLetterPassword
+                  //                   ? Colors.green
+                  //                   : Colors.transparent,
+                  //               border: _controller.smallLetterPassword
+                  //                   ? Border.all(color: Colors.transparent)
+                  //                   : Border.all(color: Colors.black),
+                  //               borderRadius: BorderRadius.circular(50)),
+                  //           child: const Center(
+                  //             child: Icon(
+                  //               Icons.check,
+                  //               color: Colors.black,
+                  //               size: 15,
+                  //             ),
+                  //           ),
+                  //         ),
+                  //         const SizedBox(
+                  //           width: 10,
+                  //         ),
+                  //         const Text("Contains at least 1 Small letter.",style: TextStyle(color: Colors.black))
+                  //       ],
+                  //     ),
+                  //     const SizedBox(
+                  //       height: 10,
+                  //     ),
+                  //     Row(
+                  //       children: [
+                  //         AnimatedContainer(
+                  //           duration: const Duration(milliseconds: 500),
+                  //           width: 20,
+                  //           height: 20,
+                  //           decoration: BoxDecoration(
+                  //               color: _controller.specLetterPassword
+                  //                   ? Colors.green
+                  //                   : Colors.transparent,
+                  //               border: _controller.specLetterPassword
+                  //                   ? Border.all(color: Colors.transparent)
+                  //                   : Border.all(color: Colors.black),
+                  //               borderRadius: BorderRadius.circular(50)),
+                  //           child: const Center(
+                  //             child: Icon(
+                  //               Icons.check,
+                  //               color: Colors.black,
+                  //               size: 15,
+                  //             ),
+                  //           ),
+                  //         ),
+                  //         const SizedBox(
+                  //           width: 10,
+                  //         ),
+                  //         const Text("Contains at least 1 Special character.",style: TextStyle(color: Colors.black))
+                  //       ],
+                  //     ),
+                  //     const SizedBox(
+                  //       height: 16,
+                  //     ),
+                  //   ],
+                  // ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text(
                         "Remember Me",
-                        style: TextStyle(color: Colors.grey),
+                        style: TextStyle(color: Colors.black),
                       ),
                       Checkbox(
                         value: _controller.isChecked,
@@ -291,7 +285,7 @@ class LoginWidgets extends StatelessWidget {
                   GestureDetector(
                     key: loginKey,
                     onTap: () {
-                      if (_controller.isChecked &&
+                      if (/*_controller.isChecked &&*/
                           _controller.email.text.isNotEmpty &&
                           _controller.pass.text.isNotEmpty) {
                         Get.offAndToNamed(Paths.dashBoard);
@@ -302,13 +296,13 @@ class LoginWidgets extends StatelessWidget {
                     },
                     child: "Login"
                         .text
-                        .white
+                        .black
                         .light
                         .xl
                         .makeCentered()
                         .box
-                        .white
-                        .shadowOutline(outlineColor: Colors.grey)
+                        .black
+                        .shadowOutline(outlineColor: Colors.black)
                         .color(const Color(0xff0277bd))
                         .roundedLg
                         .make()

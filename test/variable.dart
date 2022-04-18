@@ -57,7 +57,7 @@ abstract class Variable {
   ) =>
       ScreenUtilInit(
         designSize: const Size(375, 745),
-        builder: () => GetMaterialApp(
+        builder: (x) => GetMaterialApp(
           home: widget,
         ),
       );

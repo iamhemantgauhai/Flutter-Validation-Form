@@ -14,7 +14,7 @@ class SplashWidget extends StatelessWidget{
         return Container(
           key: containKey,
             color: Colors.white,
-            child:const FlutterLogo(),
+            child:Image.network('https://wallpapercave.com/uwp/uwp77938.jpeg'),
         );
       }
     );
